@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution page on Frontend Mentor]()
+- Solution URL: [Solution page on Frontend Mentor](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-FOcXgI4mi)
 - Github Pages URL: [Github Pages](https://rachmatilham.github.io/base-apparel-coming-soon-master/)
 
 ## My process
@@ -56,7 +56,7 @@ I need to learn and practice more about regex and javascript.
 
 ### Useful resources
 
-- [Email Validation](https://www.w3resource.com/javascript/form/email-validation.php) - I learned to use regex for email validation from the source
+- [Email Validation](https://www.w3resource.com/javascript/form/email-validation.php) - I learned to use regex for email validation from this source.
 
 ## Author
 
