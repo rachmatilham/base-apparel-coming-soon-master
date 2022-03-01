@@ -1,0 +1,205 @@
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  max-width: 100vw;
+  min-height: 800px;
+  font-size: 16px;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+}
+
+header {
+  margin: 30px;
+  margin-bottom: 25px;
+  width: 105px;
+}
+
+aside {
+  width: 100%;
+  min-height: 250px;
+  background-image: url(./images/hero-mobile.jpg);
+  background-size: cover;
+}
+
+article {
+  margin: 60px 30px 0;
+  text-align: center;
+  color: var(--desaturated-red);
+}
+
+article h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2.5em;
+  line-height: 1;
+  letter-spacing: 0.275em;
+}
+
+article h1 span {
+  color: var(--dark-grayish-red);
+  font-weight: 600;
+}
+
+article h2 {
+  margin-top: 20px;
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+form {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid hsla(0, 36%, 70%, 0.5);
+  border-radius: 23px;
+  width: 100%;
+  height: 46px;
+}
+
+form.active {
+  border: 1px solid var(--soft-red);
+}
+
+form input {
+  border-radius: inherit;
+  border: 0;
+  width: calc(100% - 65px);
+  padding-left: 24px;
+  opacity: 0.5;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--desaturated-red);
+}
+
+form input:focus {
+  color: black;
+  outline: none;
+}
+
+form .error-icon {
+  align-self: center;
+  margin-right: 15px;
+  display: none;
+}
+
+form .error-icon.active {
+  display: block;
+}
+
+form button {
+  height: 100%;
+  width: 65px;
+  border: 0;
+  border-radius: inherit;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  cursor: pointer;
+}
+
+form button:hover {
+  background-image: none;
+  background-color: hsl(0, 80%, 90%);
+}
+
+.alert {
+  margin-top: 10px;
+  margin-left: 24px;
+  text-align: left;
+  font-size: 0.8em;
+  display: none;
+}
+
+.alert.active {
+  display: block;
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+footer a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* RESPONSIVE DESIGN */
+@media (min-width: 1200px) {
+  body {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  main {
+    display: grid;
+    grid-template-areas:
+      "header hero"
+      "article hero";
+    grid-template-columns: auto 610px;
+    grid-template-rows: 100px auto;
+  }
+
+  header {
+    width: 165px;
+    margin-top: 60px;
+    margin-left: 160px;
+    grid-area: header;
+  }
+
+  aside {
+    grid-area: hero;
+    height: 100vh;
+    background-image: url(./images/hero-desktop.jpg);
+  }
+
+  article {
+    grid-area: article;
+    margin: 135px 220px auto 165px;
+    text-align: left;
+  }
+
+  article h1 {
+    font-size: 3.5em;
+    letter-spacing: 0.4em;
+    line-height: 1.2;
+  }
+
+  article h2 {
+    font-size: 1em;
+    line-height: 1.75;
+  }
+
+  form {
+    margin-top: 40px;
+    height: 56px;
+  }
+
+  form input {
+    width: calc(100% - 100px);
+  }
+
+  form button {
+    width: 100px;
+  }
+
+  footer {
+    width: 50%;
+  }
+}
